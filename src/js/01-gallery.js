@@ -1,4 +1,4 @@
-// Add imports above this line
+ // Add imports above this line
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items';
@@ -17,20 +17,10 @@ const gallery = galleryItems.map(({ preview, original, description }) => {
 
 refs.galleryRef.insertAdjacentHTML("afterbegin", gallery);
 
-
-const onSlider = (event) => {
-  event.preventDefault();
-  if (event.target.tagName !== "IMG") {
-    return false
-    
-  }
-
-  const lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
 
     captionsData: "alt",
     captionDelay: 250,
   })
 
- 
-};
-refs.galleryRef.addEventListener("click", onSlider)
+
